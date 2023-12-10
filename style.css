@@ -50,10 +50,10 @@ h1{
 }
 
 .game{
-    width: 450px;
-    height: 450px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 500px; /* Adjust width to fitfive emojis in a row */
+    height: 500px; /*Adjust height as needed */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     transform-style: preserve-3d; 
     perspective: 500px;
@@ -61,8 +61,8 @@ h1{
 
 .item{
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +76,8 @@ h1{
     position: absolute;
     inset: 0;
     background: #209d7b;
+    opacity: 0.85;
     transition: 0.25s;
-    transform: rotate();
+    transform: rotateY(0deg);
 }
+
