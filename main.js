@@ -36,7 +36,7 @@ const emojisSets = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14,
 //Flatten teh array of arrays to get a single arrat of emojis
 const emojis = emojisSets.flat();
 
-var shuf_emojis = emojis.sort(() => (Math.random()> .5) ? 1 : -1);
+var shuf_emojis = emojis.sort(() => (Math.random() > .5) ? 1 : -1);
 for (var i=0; i<emojis.length; i++){
     let box = document.createElement('div')
     box.className = 'item';
@@ -76,11 +76,13 @@ for (var i=0; i<emojis.length; i++){
 }
 
 //Reset button functionality 
-document.querySelector('.reset').addEventListener('click', function () {
+document.querySelector('.newgame').addEventListener('click', function () {
     //Reshuffulle emojis and update game board
-    shuf_emojis = emojis.sort(() => Math.random() > 0.5 ? 2: -1 );
+    shuf_emojis = emojis.sort(() => Math.random() > 0.5 ? 1: -1 );
     var items = document.querySelectorAll('.item');
     items.forEach((item, index) => {
-        item.innerHTML = shuf_emojis[index];
+        item.innerHTML = ''
+        item.classList.remove('boxOpen', 'boxMatch'); //Clear classes
     });
 });
+
