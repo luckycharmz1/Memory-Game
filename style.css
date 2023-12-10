@@ -88,3 +88,8 @@ h1{
 .boxOpen:after{
     transform: rotateY(180deg);
 }
+
+.boxOpen:after , 
+.boxMatch:after{
+    transform: rotateY(180deg);
+}
