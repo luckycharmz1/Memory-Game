@@ -86,4 +86,3 @@ document.querySelector('.newgame').addEventListener('click', function () {
     });
 });
 
-
